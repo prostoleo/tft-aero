@@ -1,0 +1,38 @@
+// @use '../abstract/colors' as *;
+// @use '../abstract/mixins' as *;
+@import '../abstract/colors';
+@import '../abstract/mixins';
+
+.container {
+	max-width: $maw-container;
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(100% - 40px);
+
+	@include mq(lg) {
+		width: calc(100% - 50px);
+	}
+}
+
+body {
+	scroll-behavior: smooth;
+	font-family: 'Gilroy', Helvetica, Arial, system-ui, sans-serif !important;
+
+	& > * {
+		max-width: 100vw;
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Acrom', Helvetica, Arial, sans-serif;
+	font-weight: 700;
+}
+
+p {
+	max-width: 65ch;
+}

@@ -1,0 +1,307 @@
+@import '../abstract/index';
+@import '../components/index';
+
+.hero-section {
+	padding: 300px 0 0px;
+	--mt-negative: -7rem;
+	margin-top: var(--mt-negative);
+	margin-bottom: 50px;
+
+	@include mq(sm) {
+		padding-top: 320px;
+	}
+	@include mq(2sm) {
+		padding-top: 370px;
+	}
+
+	@include mq(med) {
+		--mt-negative: -8rem;
+		padding-top: 30px;
+	}
+
+	@include mq(lg) {
+		--mt-negative: -6rem;
+	}
+
+	/* background: url(/assets/img/мужчина\ в\ салоне\ тренажера\ -\ tft\ aero.jpg),
+		linear-gradient(0deg, #ffffff 28.11%, rgba(255, 255, 255, 0) 69.4%); */
+	background: url(/assets/img/главная-фон.png),
+		linear-gradient(0deg, rgb(255, 255, 255) 50.11%, rgba(255, 0, 0, 0) 69.4%),
+		url(/assets/img/волны\ -\ мобил\ -\ первый.svg);
+	background-size: 125%, cover, 90%;
+	background-position: left -80px top 0px, center center, left -2vw top 120%;
+	background-repeat: no-repeat, no-repeat;
+
+	background-blend-mode: screen, darken;
+
+	position: relative;
+
+	@include mq(sm) {
+		background-size: 115%, cover, 300px;
+		background-position: left -80px top 0px, center center,
+			left -2vw bottom -50%;
+	}
+
+	@include mq(2sm) {
+		background-size: 113%, cover, 310px;
+		background-position: left -80px top 0px, center center, left 0 bottom 0%;
+	}
+
+	@include mq(med) {
+		background: url(/assets/img/главная-фон.png),
+			linear-gradient(
+				90deg,
+				rgb(255, 255, 255) 35.11%,
+				rgba(255, 0, 0, 0) 50.4%
+			);
+		background-size: 77%, cover;
+		// background-position: right -30% top 22px, left 0px top 63px;
+		background-position: right -30% top 25px, left 0px top 65px;
+		background-repeat: no-repeat, no-repeat;
+		background-blend-mode: screen;
+
+		position: relative;
+		z-index: 20;
+	}
+
+	@include mq(lg) {
+		background-size: 80%, cover;
+		background-position: right -30% top -0.3vw, left 0px top 58px;
+
+		padding-bottom: 190px;
+	}
+
+	// .hero-section__container
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+
+		@include mq(med) {
+			display: block;
+		}
+	}
+
+	// .hero-section__title
+
+	&__title {
+		display: inline-flex;
+		--gp: 13px;
+		// align-items: center;
+		gap: var(--gp);
+
+		font-family: 'Gilroy', sans-serif;
+		line-height: 1;
+		font-weight: 700;
+
+		text-transform: uppercase;
+
+		@include mq(med) {
+			flex-direction: column;
+			--gp: 18px;
+			margin-top: 55px;
+		}
+
+		@include mq(2xl) {
+			--gp: 23px;
+		}
+	}
+
+	// .hero-section__title-first-two-words
+
+	&__title-first-two-words {
+		display: inline-flex;
+		flex-direction: column;
+
+		span {
+			line-height: 0.9;
+
+			&:first-of-type {
+				font-size: 6.2rem;
+				font-weight: 700;
+
+				color: $primary;
+
+				margin-left: -0.5rem;
+			}
+			&:last-of-type {
+				font-size: 1.35rem;
+			}
+		}
+
+		@include mq(med) {
+			gap: var(--gp, 18px);
+
+			span {
+				display: block;
+
+				&:first-of-type {
+					font-size: 12.8rem;
+				}
+				&:last-of-type {
+					font-size: 3.2rem;
+				}
+			}
+		}
+
+		@include mq(2xl) {
+			gap: var(--gp, 23px);
+
+			span {
+				&:first-of-type {
+					font-size: 15.4rem;
+				}
+				&:last-of-type {
+					font-size: 3.6rem;
+				}
+			}
+		}
+	}
+
+	// .hero-section__title-second-two-words
+
+	&__title-second-two-words {
+		margin-top: 5px;
+		display: inline-flex;
+		flex-direction: column;
+		justify-content: space-between;
+		// align-items: flex-end;
+
+		span {
+			line-height: 0.9;
+
+			&:first-of-type {
+				font-size: 2.8rem;
+			}
+			&:last-of-type {
+				font-size: 3rem;
+				color: $primary;
+			}
+		}
+
+		@include mq(med) {
+			// display: block;
+			gap: var(--gp, 18px);
+			margin-top: 0;
+
+			span {
+				display: block;
+
+				&:first-of-type {
+					font-size: 5.2rem;
+				}
+				&:last-of-type {
+					font-size: 6rem;
+				}
+			}
+		}
+
+		@include mq(2xl) {
+			// display: block;
+			gap: var(--gp, 23px);
+			margin-top: 0;
+
+			span {
+				display: block;
+
+				&:first-of-type {
+					font-size: 6.4rem;
+				}
+				&:last-of-type {
+					font-size: 7rem;
+				}
+			}
+		}
+	}
+
+	// .hero-section__certificates
+
+	&__certificates {
+		margin-top: 2rem;
+
+		border-radius: 3rem;
+		background: $grey;
+
+		overflow: hidden;
+
+		@include mq(med) {
+			margin-top: 4rem;
+		}
+	}
+
+	.certificates {
+		--px: 17px;
+		--py: 5px;
+		--py-list: 20px;
+		// maw343
+
+		@extend %tpl-certificates;
+
+		@include mq(med) {
+			position: absolute;
+			left: 0;
+			right: 0;
+
+			width: 100vw;
+			max-width: unset !important;
+			// margin-left: -20px;
+			// margin-right: -20px;
+
+			// .certificates__title
+			&__title {
+			}
+
+			// .certificates__list
+
+			&__list {
+				flex-direction: row !important;
+			}
+
+			// .certificates__item
+
+			&__item {
+				display: inline-flex !important;
+				width: 100%;
+				flex-direction: column;
+				border-right: 1px solid black;
+				border-bottom: none !important;
+				padding-top: 0 !important;
+				// padding-left: 40%;
+
+				& > * {
+					margin-left: 30%;
+				}
+
+				&:first-of-type {
+				}
+				&:last-of-type {
+					padding-bottom: 1rem !important;
+					border-right: none;
+				}
+			}
+
+			// .certificates__item-time
+
+			&__item-time {
+				font-size: 2.4rem;
+				font-weight: 800;
+			}
+
+			// .certificates__item-price
+
+			&__item-price {
+				font-size: 2.4rem;
+				font-weight: 700;
+			}
+		}
+
+		@include mq(xl) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
+.container {
+}
