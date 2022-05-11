@@ -1,0 +1,166 @@
+@import '../abstract/index';
+
+.instructors-section {
+	padding-top: 100px;
+	padding-bottom: 50px;
+
+	// .instructors-section__container
+
+	&__container {
+	}
+
+	// .instructors-section__title
+
+	&__title {
+		@extend %tpl-h2;
+		margin-bottom: 60px;
+	}
+
+	.glide {
+		// .glide__arrows
+
+		&__arrows {
+			@extend %tpl-slider-arrows;
+
+			margin-top: 35px;
+
+			@include mq(med) {
+				margin-top: 46px;
+			}
+
+			@include mq(2xl) {
+				display: none;
+			}
+		}
+
+		// .glide__arrow
+
+		&__arrow {
+			@extend %tpl-slider-arrow;
+		}
+
+		// .glide__arrow--left
+
+		&__arrow--left {
+		}
+
+		// .glide__bullets
+
+		&__bullets {
+			@extend %tpl-slider-bullets;
+		}
+
+		// .glide__bullet
+
+		&__bullet {
+			@extend %tpl-slider-bullet;
+
+			&--active {
+				color: $secondary;
+			}
+		}
+
+		// .glide__arrow--right
+
+		&__arrow--right {
+		}
+
+		// .glide__track
+
+		&__track {
+		}
+
+		// .glide__slides
+
+		&__slides {
+			@include mq(2xl) {
+				display: grid;
+				grid-template-columns: repeat(4, 1fr);
+				gap: 10px;
+			}
+		}
+
+		// .glide__slide
+
+		&__slide {
+		}
+	}
+	.slide-card {
+		border-radius: 20px 20px 15px 15px;
+		background-color: $primary;
+
+		// .slide-card__img
+
+		&__img {
+			border-radius: 20px;
+			overflow: hidden;
+
+			img {
+				width: 100%;
+				object-fit: cover;
+				max-height: 250px;
+
+				@include mq(xl) {
+					max-width: 307px;
+				}
+			}
+		}
+
+		// .slide-card__body
+
+		&__body {
+			padding: 10px 20px;
+		}
+
+		// .slide-card__name
+
+		&__name {
+			font-family: $Gilroy;
+			font-weight: 700;
+			font-size: 24px;
+			line-height: 1.25;
+
+			color: $white;
+		}
+
+		// .slide-card__position
+
+		&__position {
+			font-family: $Gilroy;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 1.25;
+
+			color: $white;
+		}
+	}
+
+	&__cta-block {
+		margin-top: 100px;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__cta {
+		font-family: $Gilroy;
+		display: inline-block;
+		border-radius: 15px;
+		padding: 5px;
+
+		max-width: 22ch;
+
+		background-color: $primary;
+
+		font-size: 24px;
+		line-height: 1.2;
+		font-weight: 600;
+
+		text-transform: uppercase;
+
+		color: $white;
+	}
+}
+.container {
+}

@@ -12,6 +12,7 @@
     "vite": "^2.9.7"
   },
   "dependencies": {
-    "@glidejs/glide": "^3.5.2"
+    "@glidejs/glide": "^3.5.2",
+    "vanilla-lazyload": "^17.8.1"
   }
 }

@@ -140,6 +140,10 @@
 				opacity: 0.8;
 				color: $white;
 			}
+
+			@include mq(4xl) {
+				font-size: 1.8rem;
+			}
 		}
 
 		// .nav__info
@@ -162,7 +166,7 @@
 		// .nav__address
 
 		&__address {
-			max-width: 50ch;
+			max-width: 32ch;
 
 			font-family: 'Gilroy', sans-serif;
 			font-size: 1.4rem;
@@ -171,6 +175,10 @@
 
 			@include mq(med) {
 				text-align: right;
+			}
+
+			@include mq(4xl) {
+				font-size: 1.8rem;
 			}
 		}
 
@@ -200,8 +208,16 @@
 					width: 15px;
 				}
 			}
+
+			@include mq(4xl) {
+				font-size: 1.8rem;
+
+				img {
+					width: 15px;
+				}
+			}
 		}
 	}
-	.btn {
-	}
+}
+.btn {
 }

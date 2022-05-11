@@ -2,7 +2,16 @@
 
 .present-section {
 	padding-bottom: 47px;
+
+	position: relative;
 	// transform: rotate(-0.68deg);
+	--total-height: 829px;
+
+	@include mq(2xl) {
+		max-height: var(--total-height);
+		height: 100%;
+		padding-bottom: calc(var(--total-height) + 60px);
+	}
 
 	// .present-section__container
 
@@ -12,11 +21,23 @@
 	// .present-section__imgs
 
 	&__imgs {
-		width: 100vw;
+		width: 100%;
 		height: 380px;
 		position: relative;
 
-		left: -20px;
+		height: clamp(380px, 60vw, 710px);
+
+		@include mq(med) {
+			// height: 560px;
+		}
+		@include mq(2xl) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+		}
 
 		div {
 			width: 100%;
@@ -34,33 +55,82 @@
 			background-size: cover, cover, cover;
 			// , contain
 
-			mask-image: url(/assets/img/mask-present.svg);
+			//todo mask
+			mask-image: url(/assets/img/mask-present.png);
 			mask-repeat: no-repeat;
 			mask-size: cover;
 			// mask-position: center center;
 
 			// margin-left: -6.2vw;
+			// clip-path: url(/assets/img/mask-present.svg);
+
+			@include mq(med) {
+				mask-image: url(/assets/img/mask-present-tablet.png);
+				mask-position: 50% 0%;
+			}
+
+			@include mq(xl) {
+				// mask-size: contain;
+			}
+			@include mq(2xl) {
+				// mask-size: contain;
+				mask-image: url(/assets/img/mask-present-desktop.png);
+				mask-position: 50% 0%;
+				mask-size: contain;
+			}
 		}
 
 		img.imgs__father {
 			margin-top: 1rem;
 
 			position: absolute;
-			top: 9%;
+			top: -3%;
 			right: 17vw;
 
 			max-width: 100%;
-			max-height: 336px;
+			z-index: 20;
+			// max-height: 336px;
+			// max-height: clamp(336px, 50vw, 500px);
 
+			// object-fit: cover;
+
+			max-height: clamp(336px, 53vw, 500px);
 			object-fit: cover;
+			height: 100%;
 
 			@include mq(2sm) {
 				right: 19vw;
+			}
+
+			@include mq(med) {
+				right: unset;
+				left: 7vw;
+
+				// max-height: clamp(336px, 56vw, 793px);
+				max-height: 430px;
+				object-fit: cover;
+				height: 100%;
+				top: 70px;
+			}
+
+			@include mq(xl) {
+				left: 10vw;
+				max-height: 550px;
+			}
+
+			@include mq(2xl) {
+				max-height: 710px;
 			}
 		}
 
 		.cloud {
 			position: absolute;
+
+			&-left,
+			&-right {
+				width: 100%;
+				max-width: 102px;
+			}
 
 			&-left {
 				top: 50%;
@@ -70,6 +140,35 @@
 				top: 4%;
 				right: 11vw;
 			}
+
+			@include mq(med) {
+				&-left,
+				&-right {
+					max-width: 142px;
+				}
+
+				&-left {
+					top: 47%;
+					left: 12vw;
+				}
+				&-right {
+					top: 4%;
+					right: unset;
+					left: 33vw;
+				}
+			}
+
+			@include mq(2xl) {
+				&-left,
+				&-right {
+					max-width: 240px;
+				}
+
+				&-left {
+				}
+				&-right {
+				}
+			}
 		}
 	}
 	// .present-section__title
@@ -78,6 +177,26 @@
 		@extend %tpl-h2;
 
 		max-width: 22ch;
+
+		@include mq(med) {
+			max-width: 30ch;
+
+			position: absolute;
+			top: 20%;
+			left: 40%;
+
+			z-index: 10;
+			color: white !important;
+
+			font-size: 20px !important;
+			font-weight: 600;
+
+			font-family: $Gilroy;
+		}
+
+		@include mq(2xl) {
+			font-size: 3.6rem;
+		}
 	}
 
 	// .present-section__certificates
@@ -96,6 +215,8 @@
 		--py: 5px;
 		--py-list: 20px;
 		@extend %tpl-certificates;
+		margin-left: 20px;
+		margin-right: 20px;
 
 		// .certificates__title
 
@@ -120,6 +241,18 @@
 		// .certificates__item-price
 
 		&__item-price {
+		}
+
+		@include mq(med) {
+			position: absolute;
+			top: 40%;
+			left: 40%;
+
+			// .certificates__list
+
+			&__list {
+				padding-left: calc(var(--px) * 3.5) !important;
+			}
 		}
 	}
 }

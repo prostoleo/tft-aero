@@ -1,0 +1,42 @@
+@import '../abstract/index';
+
+.contact-section {
+	// .contact-section__container
+
+	&__container {
+	}
+
+	// .contact-section__title
+
+	&__title {
+		@extend %tpl-h2;
+
+		margin-bottom: 35px;
+	}
+
+	.for-img {
+		padding-top: 40px;
+		background-color: $primary;
+		border-radius: 40px 40px 0 0;
+
+		img {
+			height: 250px;
+			object-fit: cover;
+			border-radius: 20px 20px 0 0;
+			object-position: 46% center;
+
+			@include mq(xl) {
+				height: 316px;
+			}
+
+			@include mq(3xl) {
+				height: 440px;
+			}
+		}
+	}
+
+	iframe.map {
+	}
+}
+.container {
+}

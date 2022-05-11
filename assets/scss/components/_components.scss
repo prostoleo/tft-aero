@@ -7,10 +7,22 @@
 	font-family: $Acrom;
 	font-weight: 700;
 	font-size: 18px;
-	line-height: 22px;
+	line-height: 1.22;
 	text-transform: uppercase;
 
 	color: $secondary;
+
+	@include mq(med) {
+		font-size: 36px;
+	}
+
+	@include mq(2xl) {
+		font-size: 48px;
+	}
+
+	@include mq(4xl) {
+		font-size: 64px;
+	}
 }
 
 %tpl-certificates {
@@ -68,6 +80,16 @@
 			font-family: $Acrom;
 			font-size: 1.6rem;
 			font-weight: 800;
+
+			@include mq(med) {
+				font-size: 1.8rem;
+			}
+			@include mq(2xl) {
+				font-size: 2.4rem;
+			}
+			@include mq(4xl) {
+				font-size: 4.8rem;
+			}
 		}
 
 		// .certificates__item-price
@@ -75,9 +97,113 @@
 		&__item-price {
 			font-family: $Acrom;
 			font-size: 1.6rem;
-			font-weight: 600;
+			font-weight: 700;
 
 			color: $secondary;
+
+			@include mq(med) {
+				font-size: 1.8rem;
+			}
+			@include mq(2xl) {
+				font-size: 2.4rem;
+			}
+			@include mq(4xl) {
+				font-size: 4.8rem;
+			}
 		}
+	}
+
+	@include mq(2xl) {
+		max-width: 560px;
+	}
+
+	@include mq(4xl) {
+		max-width: 710px;
+	}
+}
+
+%tpl-slider-bullets {
+	position: static !important;
+	top: 0;
+	bottom: unset !important;
+	// left: 50%;
+	// margin-top: 18px;
+
+	transform: unset !important;
+
+	display: flex;
+	align-items: center;
+	gap: 28px;
+}
+
+%tpl-slider-bullet {
+	width: unset !important;
+	height: unset !important;
+
+	display: inline-block !important;
+
+	margin: 0 !important;
+	padding: 0.2em !important;
+	border-radius: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
+
+	font-family: 'Liquid Crystal';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1;
+	text-transform: uppercase;
+	letter-spacing: 0.15em;
+
+	color: $primary;
+
+	@include mq(med) {
+		font-size: 24px;
+	}
+	@include mq(2xl) {
+		font-size: 36px;
+	}
+}
+
+%tpl-slider-arrows {
+	// position: absolute;
+	// top: 0;
+	// bottom: unset !important;
+	// left: 50%;
+
+	// transform: translateX(-50%);
+
+	max-width: 350px;
+	// width: 110%;
+	margin-left: auto;
+	margin-right: auto;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include mq(med) {
+		margin-left: 0 !important;
+	}
+}
+
+%tpl-slider-arrow {
+	flex-shrink: 0;
+
+	position: unset !important;
+	border: none !important;
+	box-shadow: none !important;
+	color: unset !important;
+	// all: unset !important;
+	display: block;
+	padding: 0 !important;
+	cursor: pointer;
+
+	transform: translateY(0%);
+
+	img {
+		width: 3.4rem;
+		height: 3.4rem;
 	}
 }
