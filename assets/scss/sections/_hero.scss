@@ -258,7 +258,7 @@
 			right: 0;
 
 			width: 100vw;
-			max-width: $maw-container;
+			max-width: $maw-container !important;
 			// margin-left: -20px;
 			// margin-right: -20px;
 
@@ -315,7 +315,7 @@
 			margin-left: 0;
 			margin-right: 0;
 			width: 100%;
-			max-width: 640px;
+			max-width: 640px !important;
 
 			// .certificates__title
 			&__title {

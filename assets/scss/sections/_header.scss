@@ -166,7 +166,8 @@
 		// .nav__address
 
 		&__address {
-			max-width: 32ch;
+			max-width: 21ch;
+			width: fit-content;
 
 			font-family: 'Gilroy', sans-serif;
 			font-size: 1.4rem;

@@ -5,6 +5,7 @@ import Glide, {
 } from '@glidejs/glide/dist/glide.modular.esm';
 
 const glideWhereEl = document.getElementById('glide-where');
+const glideDiffsEl = document.getElementById('glide-diffs');
 const glideReviewsEl = document.getElementById('glide-reviews');
 const glideInstructorsEl = document.getElementById('glide-instructors');
 // console.log('glideInstructorsEl: ', glideInstructorsEl);
@@ -25,6 +26,27 @@ export function initGlide() {
 	}).mount({
 		Controls,
 		Breakpoints,
+		Swipe,
+	});
+
+	const sliderDiffs = new Glide(glideDiffsEl, {
+		type: 'carousel',
+		perView: 1,
+		// gap: 10,
+		// bound: true,
+		rewind: true,
+
+		/* breakpoints: {
+			768: {
+				perView: 2,
+			},
+			450: {
+				perView: 1,
+			},
+		}, */
+	}).mount({
+		Controls,
+		// Breakpoints,
 		Swipe,
 	});
 
@@ -71,12 +93,14 @@ export function initGlide() {
 	});
 
 	function destroyInstanceOnWideScreen(instance, screen = 1366) {
-		window.innerWidth > screen && instance.destroy();
+		window.innerWidth >= screen && instance.destroy();
 	}
 
 	window.addEventListener('resize', () => {
 		destroyInstanceOnWideScreen(sliderInstructors);
+		destroyInstanceOnWideScreen(sliderDiffs, 768);
 	});
 
 	destroyInstanceOnWideScreen(sliderInstructors);
+	destroyInstanceOnWideScreen(sliderDiffs, 768);
 }

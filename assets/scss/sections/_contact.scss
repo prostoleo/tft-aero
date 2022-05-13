@@ -36,6 +36,15 @@
 	}
 
 	iframe.map {
+		height: 351px;
+
+		@include mq(2xl) {
+			height: 438px;
+		}
+
+		@include mq(3xl) {
+			height: 628px;
+		}
 	}
 }
 .container {
