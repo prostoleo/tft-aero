@@ -6,6 +6,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>TFT aero | авиатренажеры Boeing и Airbus</title>
 
+		<link
+			rel="stylesheet"
+			href="assets/css/awesome-notifications/awesome-notifications.css"
+		/>
 		<link rel="stylesheet" href="assets/fonts/fonts.css" />
 		<link rel="stylesheet" href="assets/scss/main.scss" />
 	</head>
@@ -671,7 +675,10 @@
 					<!-- /.glide -->
 
 					<div class="instructors-section__cta-block">
-						<button class="btn instructors-section__cta">
+						<button
+							class="btn instructors-section__cta"
+							data-micromodal-trigger="modal-order-certificate"
+						>
 							Заказать сертификат<br />
 							онлайн
 						</button>
@@ -785,6 +792,55 @@
 			</div>
 			<!-- /.container footer__container -->
 		</footer>
+
+		<!-- [1] -->
+		<div id="modal-order-certificate" class="modal" aria-hidden="true">
+			<!-- [2] -->
+			<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+				<!-- [3] -->
+				<div
+					class="modal__content"
+					role="dialog"
+					aria-modal="true"
+					aria-labelledby="modal-form-title"
+				>
+					<header class="modal__header">
+						<h2 class="modal__header-title" id="modal-form-title">
+							Заказать сертификат
+						</h2>
+
+						<!-- [4] -->
+						<button
+							class="modal__close"
+							aria-label="Close modal"
+							data-micromodal-close
+						>
+							X
+						</button>
+					</header>
+
+					<div class="modal__body" id="modal-body">
+						<form id="modal-form" class="modal__body-form form">
+							<div class="form__row">
+								<input type="text" id="input-name" />
+								<label for="#input-name">Ваше имя</label>
+								<small class="hidden" id="name-error">Введите свое имя</small>
+							</div>
+							<div class="form__row">
+								<input type="text" id="input-phone" class="tel" />
+								<label for="#input-phone">Ваш телефон</label>
+								<small class="hidden" id="phone-error"
+									>Введите валидный телефон</small
+								>
+							</div>
+							<button class="btn form__submit" id="btn-order-certificate">
+								Заказать
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
 
 		<!-- <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.1/dist/lazyload.min.js"></script>
 		<script>

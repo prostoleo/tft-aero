@@ -6,8 +6,13 @@ import '@glidejs/glide/dist/css/glide.theme.min.css';
 import { initBurger } from './src/js/burger';
 import { initGlide } from './src/js/glide';
 // import { lazyLoadFunc } from './src/js/lazy-load';
+import MicroModal from 'micromodal';
+import formHandler from './src/js/formHandler';
 
 import './src/js/glide';
+import maskPhone from './src/js/helpers/mask-phone';
+
+// import 'awesome-notifications/dist/style.css';
 
 (function () {
 	const lazyLoadInstance = new LazyLoad({
@@ -16,6 +21,7 @@ import './src/js/glide';
 })();
 
 function initApp() {
+	MicroModal.init();
 	initBurger();
 	initGlide();
 	// lazyLoadFunc();
@@ -24,6 +30,8 @@ function initApp() {
 		Breakpoints,
 	});
 	console.log('glideSlider: ', glideSlider); */
+	formHandler();
+	maskPhone();
 }
 
 document.addEventListener('DOMContentLoaded', initApp);
