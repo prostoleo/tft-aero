@@ -1,5 +1,5 @@
 // import LazyLoad from 'vanilla-lazyload';
-import url from '../../assets/img/главная-фон.png';
+import url from '../../главная-фон.png';
 // console.log('url: ', url);
 
 export function lazyLoadFunc() {
