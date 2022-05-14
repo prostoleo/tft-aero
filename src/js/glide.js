@@ -12,7 +12,7 @@ const glideInstructorsEl = document.getElementById('glide-instructors');
 
 export function initGlide() {
 	const sliderWhere = new Glide(glideWhereEl, {
-		type: 'slider',
+		type: 'carousel',
 		perView: 2,
 		gap: 10,
 		// bound: true,

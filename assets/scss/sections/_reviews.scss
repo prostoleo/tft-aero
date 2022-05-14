@@ -63,7 +63,7 @@
 			@extend %tpl-slider-bullet;
 
 			&--active {
-				color: $secondary;
+				color: $secondary !important;
 			}
 		}
 

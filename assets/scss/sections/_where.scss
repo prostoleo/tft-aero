@@ -53,7 +53,7 @@
 			@extend %tpl-slider-bullet;
 
 			&--active {
-				color: $secondary;
+				color: $secondary !important;
 			}
 		}
 
@@ -85,6 +85,7 @@
 		// overflow: hidden;
 		// border: 1px solid rgba($grey, 0.6);
 		// border-radius: 30px;
+		// display: grid;
 		box-shadow: 1px 2px 0px rgba($grey, 0.4);
 
 		// .slide-card__title
@@ -119,16 +120,16 @@
 			img {
 				width: 100%;
 				object-fit: cover;
-				max-height: 230px;
+				height: 230px;
 
 				@include mq(med) {
-					max-height: 290px;
+					height: 290px;
 				}
 				@include mq(lg) {
-					max-height: 432px;
+					height: 432px;
 				}
 				@include mq(3xl) {
-					max-height: 560px;
+					height: 560px;
 				}
 			}
 		}
