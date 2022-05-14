@@ -1,4 +1,5 @@
 import AWN from 'awesome-notifications';
+// import '../../assets/css/awesome-notifications/awesome-notifications.css';
 import MicroModal from 'micromodal';
 
 const notifier = new AWN({

@@ -1,6 +1,6 @@
-@import '../abstract/colors';
-@import '../abstract/mixins';
-
+@import '../abstract/index';
+// @import '../abstract/mixins';
+@import '../components/index';
 .where-section {
 	padding: 75px 0;
 	position: relative;

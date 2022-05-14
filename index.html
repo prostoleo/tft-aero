@@ -8,16 +8,16 @@
 
 		<link
 			rel="stylesheet"
-			href="assets/css/awesome-notifications/awesome-notifications.css"
+			href="./assets/css/awesome-notifications/awesome-notifications.css"
 		/>
-		<link rel="stylesheet" href="assets/fonts/fonts.css" />
-		<link rel="stylesheet" href="assets/scss/main.scss" />
+		<link rel="stylesheet" href="./assets/fonts/fonts.css" />
+		<link rel="stylesheet" href="./assets/scss/main.scss" />
 	</head>
 	<body>
 		<!-- header -->
 		<header class="header">
 			<div class="container container__header">
-				<a href="" class="header__logo"
+				<a href="/" class="header__logo"
 					><img
 						src="/assets/img/logo-header.svg"
 						alt="логотип tft aero"
@@ -36,9 +36,9 @@
 								<a href="#где-летать?" class="nav__link">где летать?</a>
 							</li>
 							<!-- /.nav__item -->
-							<li class="nav__item">
+							<!-- <li class="nav__item">
 								<a href="#цены" class="nav__link">цены</a>
-							</li>
+							</li> -->
 							<!-- /.nav__item -->
 							<li class="nav__item">
 								<a href="#отзывы" class="nav__link">отзывы</a>
@@ -68,7 +68,11 @@
 					<!-- /.header__nav nav -->
 				</div>
 				<!-- /.header__content -->
-				<button id="header-btn-burger" class="btn header__burger">
+				<button
+					id="header-btn-burger"
+					class="btn header__burger"
+					aria-label="Открыть / закрыть меню"
+				>
 					<img src="/assets/img/burger.svg" alt="" class="header__burger-img" />
 				</button>
 			</div>
@@ -189,7 +193,7 @@
 			</section>
 			<!-- /.what-section -->
 
-			<section class="where-section">
+			<section id="где-летать?" class="where-section">
 				<div class="container where-section__container">
 					<h2 class="where-section__title">куда можно летать?</h2>
 					<div class="where-section__slider">
@@ -198,6 +202,7 @@
 								<button
 									class="glide__arrow glide__arrow--left"
 									data-glide-dir="<"
+									aria-label="К предыдущему слайду"
 								>
 									<img src="/assets/img/arrow-left.svg" alt="" />
 								</button>
@@ -210,6 +215,7 @@
 								<button
 									class="glide__arrow glide__arrow--right"
 									data-glide-dir=">"
+									aria-label="К следующему слайду"
 								>
 									<img src="/assets/img/arrow-right.svg" alt="" />
 								</button>
@@ -435,12 +441,14 @@
 							<button
 								class="glide__arrow glide__arrow--left"
 								data-glide-dir="<"
+								aria-label="К предыдущему слайду"
 							>
 								<img src="/assets/img/arrow-left.svg" alt="" />
 							</button>
 							<button
 								class="glide__arrow glide__arrow--right"
 								data-glide-dir=">"
+								aria-label="К следующему слайду"
 							>
 								<img src="/assets/img/arrow-right.svg" alt="" />
 							</button>
@@ -556,6 +564,7 @@
 							<button
 								class="glide__arrow glide__arrow--left"
 								data-glide-dir="<"
+								aria-label="К предыдущему слайду"
 							>
 								<img src="/assets/img/arrow-left.svg" alt="" />
 							</button>
@@ -568,6 +577,7 @@
 							<button
 								class="glide__arrow glide__arrow--right"
 								data-glide-dir=">"
+								aria-label="К следующему слайду"
 							>
 								<img src="/assets/img/arrow-right.svg" alt="" />
 							</button>
@@ -654,6 +664,7 @@
 							<button
 								class="glide__arrow glide__arrow--left"
 								data-glide-dir="<"
+								aria-label="К предыдущему слайду"
 							>
 								<img src="/assets/img/arrow-left.svg" alt="" />
 							</button>
@@ -666,6 +677,7 @@
 							<button
 								class="glide__arrow glide__arrow--right"
 								data-glide-dir=">"
+								aria-label="К следующему слайду"
 							>
 								<img src="/assets/img/arrow-right.svg" alt="" />
 							</button>
@@ -739,7 +751,7 @@
 					<!-- /.socials__title -->
 					<ul class="socials__list">
 						<li class="socials__item">
-							<a href="" class="socials__link"
+							<a href="#" class="socials__link"
 								><img
 									data-src="/assets/img/instagram.svg"
 									alt=""
@@ -749,7 +761,7 @@
 						</li>
 						<!-- /.socials__item -->
 						<li class="socials__item">
-							<a href="" class="socials__link"
+							<a href="#" class="socials__link"
 								><img
 									data-src="/assets/img/facebook.svg"
 									alt=""
@@ -759,7 +771,7 @@
 						</li>
 						<!-- /.socials__item -->
 						<li class="socials__item">
-							<a href="" class="socials__link"
+							<a href="#" class="socials__link"
 								><img
 									data-src="/assets/img/ticktock.svg"
 									alt=""
@@ -769,7 +781,7 @@
 						</li>
 						<!-- /.socials__item -->
 						<li class="socials__item">
-							<a href="" class="socials__link"
+							<a href="#" class="socials__link"
 								><img
 									data-src="/assets/img/vk.svg"
 									alt=""
@@ -841,14 +853,6 @@
 				</div>
 			</div>
 		</div>
-
-		<!-- <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.1/dist/lazyload.min.js"></script>
-		<script>
-			console.log('LazyLoad: ', LazyLoad);
-			var lazyLoadInstance = new LazyLoad({
-				// Your custom settings go here
-			});
-		</script> -->
 
 		<script type="module" src="/main.js"></script>
 	</body>
