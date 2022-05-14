@@ -3,9 +3,9 @@
 @font-face {
 	font-family: 'Acrom';
 	src: local('Acrom Bold'), local('Acrom-Bold'),
-		url('Acrom-Bold.woff2') format('woff2'),
-		url('Acrom-Bold.woff') format('woff'),
-		url('Acrom-Bold.ttf') format('truetype');
+		url('/fonts/Acrom-Bold.woff2') format('woff2'),
+		url('/fonts/Acrom-Bold.woff') format('woff'),
+		url('/fonts/Acrom-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -15,9 +15,9 @@
 @font-face {
 	font-family: 'Acrom';
 	src: local('Acrom ExtraBold'), local('Acrom-ExtraBold'),
-		url('Acrom-ExtraBold.woff2') format('woff2'),
-		url('Acrom-ExtraBold.woff') format('woff'),
-		url('Acrom-ExtraBold.ttf') format('truetype');
+		url('/fonts/Acrom-ExtraBold.woff2') format('woff2'),
+		url('/fonts/Acrom-ExtraBold.woff') format('woff'),
+		url('/fonts/Acrom-ExtraBold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -28,9 +28,9 @@
 @font-face {
 	font-family: 'Gilroy';
 	src: local('Gilroy Regular'), local('Gilroy-Regular'),
-		url('Gilroy-Regular.woff2') format('woff2'),
-		url('Gilroy-Regular.woff') format('woff'),
-		url('Gilroy-Regular.ttf') format('truetype');
+		url('/fonts/Gilroy-Regular.woff2') format('woff2'),
+		url('/fonts/Gilroy-Regular.woff') format('woff'),
+		url('/fonts/Gilroy-Regular.ttf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -41,9 +41,9 @@
 @font-face {
 	font-family: 'Gilroy';
 	src: local('Gilroy Medium'), local('Gilroy-Medium'),
-		url('Gilroy-Medium.woff2') format('woff2'),
-		url('Gilroy-Medium.woff') format('woff'),
-		url('Gilroy-Medium.ttf') format('truetype');
+		url('/fonts/Gilroy-Medium.woff2') format('woff2'),
+		url('/fonts/Gilroy-Medium.woff') format('woff'),
+		url('/fonts/Gilroy-Medium.ttf') format('truetype');
 	font-weight: 500;
 	font-style: normal;
 	font-display: swap;
@@ -54,9 +54,9 @@
 @font-face {
 	font-family: 'Gilroy';
 	src: local('Gilroy Semibold'), local('Gilroy-Semibold'),
-		url('Gilroy-Semibold.woff2') format('woff2'),
-		url('Gilroy-Semibold.woff') format('woff'),
-		url('Gilroy-Semibold.ttf') format('truetype');
+		url('/fonts/Gilroy-Semibold.woff2') format('woff2'),
+		url('/fonts/Gilroy-Semibold.woff') format('woff'),
+		url('/fonts/Gilroy-Semibold.ttf') format('truetype');
 	font-weight: 600;
 	font-style: normal;
 	font-display: swap;
@@ -67,9 +67,9 @@
 @font-face {
 	font-family: 'Gilroy';
 	src: local('Gilroy Bold'), local('Gilroy-Bold'),
-		url('Gilroy-Bold.woff2') format('woff2'),
-		url('Gilroy-Bold.woff') format('woff'),
-		url('Gilroy-Bold.ttf') format('truetype');
+		url('/fonts/Gilroy-Bold.woff2') format('woff2'),
+		url('/fonts/Gilroy-Bold.woff') format('woff'),
+		url('/fonts/Gilroy-Bold.ttf') format('truetype');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -79,9 +79,9 @@
 @font-face {
 	font-family: 'Gilroy';
 	src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
-		url('Gilroy-ExtraBold.woff2') format('woff2'),
-		url('Gilroy-ExtraBold.woff') format('woff'),
-		url('Gilroy-ExtraBold.ttf') format('truetype');
+		url('/fonts/Gilroy-ExtraBold.woff2') format('woff2'),
+		url('/fonts/Gilroy-ExtraBold.woff') format('woff'),
+		url('/fonts/Gilroy-ExtraBold.ttf') format('truetype');
 	font-weight: 800;
 	font-style: normal;
 	font-display: swap;
@@ -90,7 +90,7 @@
 @font-face {
 	font-family: 'Liquid Crystal';
 	src: local('Liquid Crystal'), local('Liquid Crystal'),
-		url('LiquidCrystal-Normal.otf') format('truetype');
+		url('/fonts/LiquidCrystal-Normal.otf') format('truetype');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;

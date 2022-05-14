@@ -58,8 +58,11 @@
 
 			//todo mask
 			mask-image: url(/mask-present.png);
+			-webkit-mask-image: url(/mask-present.png);
 			mask-repeat: no-repeat;
+			-webkit-mask-repeat: no-repeat;
 			mask-size: cover;
+			-webkit-mask-size: cover;
 			// mask-position: center center;
 
 			// margin-left: -6.2vw;
