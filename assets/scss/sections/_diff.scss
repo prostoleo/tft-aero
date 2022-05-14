@@ -62,7 +62,7 @@
 		max-width: $maw-container;
 		margin: 0 auto;
 		padding: 80px 15vw;
-		background-image: url(/assets/img/отличия-фон-телефон.png);
+		background-image: url(/отличия-фон-телефон.png);
 		background-size: contain;
 		background-repeat: no-repeat;
 		background-position: 50% 50%;
@@ -73,7 +73,7 @@
 		line-height: 1.21;
 
 		@include mq(med) {
-			background-image: url(/assets/img/отличия-фон.png);
+			background-image: url(/отличия-фон.png);
 			font-size: 18px;
 		}
 
